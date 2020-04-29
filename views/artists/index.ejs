@@ -1,0 +1,17 @@
+<!-- 'Artists' page. This is where user inputs are stored and can be searched. -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<h2>Search Artists</h2>
+<form action="/artists" method="GET">
+  <label>Name</label>
+  <input type="text" name="name" value="<%= searchOptions.name %>">
+  <button type="submit">Search</button>
+</form>
+<br>
+<!-- Should allow user to delete query -->
+<% artists.forEach(artist => { %>
+  <div><%= artist.name %></div>
+  <a href="/artists/<%= artist.id %>">View</a>
+  <a href="/artists/<%= artist.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm', 
+              { url: `/artists/${artist.id}` }) %>
+<% }) %>

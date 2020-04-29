@@ -1,0 +1,8 @@
+<!-- 'Add an Artist' page. Displays a header, a form, a link, and a button -->
+<link rel="stylesheet" type="text/css" href="style.css">
+<h2>New Artist</h2>
+<form action="/artists" method="POST">
+  <%- include('_form_fields') %>
+  <button type="submit">Submit</button>
+  <a href="/artists">Cancel</a>
+</form>

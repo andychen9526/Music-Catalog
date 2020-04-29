@@ -1,0 +1,15 @@
+<!-- Page after you click "View" from "Lists of Artists"-->
+<!-- Shows artist's name and song titles entered -->
+<h2><%= artist.name %></h2>
+<a href="/artists/<%= artist.id %>/edit">Edit</a>
+<%- include('../partials/deleteForm',
+            { url: `/artists/${artist.id}` }) %>
+<% if (songsByArtist.length > 0) { %>
+  <h2>Songs By Artist</h2>
+  <% songsByArtist.forEach(song => { %>
+    <div>
+      <%= song.title %> |
+      <%= song.genre %>
+  </div>
+  <% }) %>
+<% } %>

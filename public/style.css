@@ -1,0 +1,17 @@
+#siteName {
+    font-size: 75px;
+    margin: 50px 50px 10px 50px;
+}
+body {
+    height: 100%;
+    background-image: linear-gradient(lightblue, white);
+    background-repeat:no-repeat;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+img {
+    border-radius: 10px;
+}
